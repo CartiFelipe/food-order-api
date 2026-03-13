@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A template for future node projects with typescript",
   "main": "build/index.js",
-  "type": "commonjs",
+  "type": "module",
   "author": "Caio Felipe",
   "scripts": {
     "dev": "tsx watch src/server.ts",

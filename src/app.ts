@@ -1,13 +1,11 @@
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
 import router from './routes';
+import ErrorHandler from './middlewares/ErrorHandler';
 
 const app = express();
 app.use(express.json());
 app.use('/', router);
-
-app.use((error: Error, _: Request, res: Response, __: NextFunction) => {
-  res.status(500).json({ message: error.message });
-});
+app.use(ErrorHandler);
 
 export default app;
